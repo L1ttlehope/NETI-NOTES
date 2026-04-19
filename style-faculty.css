@@ -1,0 +1,259 @@
+:root {
+    --dark: #19191B;
+    --gray: #696871;
+    --purple: #5454D4;
+    --blue: #0157C8;
+    --light-blue: #99E6FF;
+    --light-light-blue: #E3F8FF;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    background-color: var(--light-light-blue);
+}
+
+/* Header Styles */
+.header {
+    padding-block: 22px;
+    background: var(--light-blue); 
+}
+
+.header__container {
+    max-width: 1350px;
+    margin-inline: auto;
+    padding: 0 20px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__list {
+    display: flex;
+    gap: 40px;
+}
+
+ul {
+    list-style: none;
+}
+
+.header__list-link {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.47px;
+    color: var(--blue);
+    transition: color 0.3s;
+}
+
+.header__list-link.active {
+    color: var(--dark);
+    border-bottom: 2px solid var(--gray);
+    padding-bottom: 10px;
+}
+
+.header__list-link:hover {
+    color: var(--dark);
+}
+
+a {
+    text-decoration: none;
+}
+
+.header__button {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: var(--dark);
+    transition: opacity 0.3s;
+}
+
+.header__button:hover {
+    opacity: 0.7;
+}
+
+.hero {
+    background: var(--light-blue);
+    padding: 100px 0;
+    min-height: 500px;
+}
+
+.hero__container {
+    max-width: 1350px;
+    margin-inline: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero__content {
+    flex: 1;
+    max-width: 700px;
+}
+
+.hero__title {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.3;
+    color: var(--dark);
+    margin-bottom: 30px;
+}
+
+.hero__subtitle {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+    color: var(--dark);
+}
+
+.hero-image {
+    /* margin-left: 100px;    */
+    margin-top: 480px;
+}
+
+.hero-image img {
+    width: 350px;
+}
+
+.divider {
+    height: 200px;
+    background: var(--white);
+}
+
+.courses {
+    background: var(--light-light-blue);
+    padding: 60px 0 100px;
+}
+
+.courses__container {
+    max-width: 1350px;
+    margin-inline: auto;
+    padding: 0 20px;
+}
+
+.courses__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.course-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.course-card__title {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--dark);
+    margin-bottom: 25px;
+}
+
+.course-card__button {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--dark);
+    background: var(--white);
+    border: 2px solid var(--gray);
+    border-radius: 8px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.course-card__button:hover {
+    background: var(--dark);
+    color: var(--white);
+    border-color: var(--dark);
+}
+
+@media (max-width: 1200px) {
+    .courses__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero__container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero__content {
+        max-width: 100%;
+    }
+    
+    .hero__title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__list {
+        display: none;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero__title {
+        font-size: 28px;
+    }
+    
+    .hero__subtitle {
+        font-size: 20px;
+    }
+    
+    .hero-image img {
+        max-width: 1000px;
+    }
+    
+    .courses__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .course-card__title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero__title {
+        font-size: 24px;
+    }
+    
+    .hero__subtitle {
+        font-size: 18px;
+    }
+    
+    .course-card {
+        padding: 30px 20px;
+    }
+}
