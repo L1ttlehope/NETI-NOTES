@@ -221,6 +221,7 @@ input {
     letter-spacing: 0.5px;
 }
 
+
 @media (max-width: 1200px) {
     .faculties__grid {
         grid-template-columns: repeat(4, 1fr);
