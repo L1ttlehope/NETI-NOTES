@@ -21,7 +21,7 @@
                     <span></span>
                     <span></span>
                 </button>
-                
+
                 <ul class="header__list">
                     <li class="header__list-item">
                         <a class="header__list-link active" href="">Главная страница</a>
@@ -143,5 +143,14 @@
             </div>
         </section>
     </main>
+    <script>
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menu');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    menu.classList.toggle('active');
+});
+</script>
 </body>
 </html>
